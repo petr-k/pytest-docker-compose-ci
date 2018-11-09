@@ -1,0 +1,12 @@
+version: "3"
+services:
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+      args:
+        REQUIREMENTS_FILE: requirements-dev.txt
+    command: ["pytest"]
+    environment:
+      CI_TESTS: 1
+      TEAMCITY_VERSION: 1

@@ -1,0 +1,10 @@
+version: "3"
+services:
+  postgres:
+    image: postgres:9.6.1
+    ports:
+      - "5432"
+    environment:
+      POSTGRES_USER: su
+      POSTGRES_PASSWORD: su
+      POSTGRES_DB: test_db
